@@ -113,6 +113,27 @@ class Stack
 					System.out.println("Size of Stack is "+size);
 				}
 		}
+		void pop(Employee e)
+		{
+			//stack is UndeFlow
+			if(size ==0)
+			{
+				throw new RuntimeException("Stack UnderFlow.");
+			} else {
+				// is stack contains only one node
+				if(top.next==null)
+					{
+						top=null;
+					}
+				else {
+						top.next.prev=null;
+						top=top.next;
+					}
+				size--;
+				System.out.println("Size of Stack is "+size);
+				}
+			
+		}
 		
 		
 	}
