@@ -12,12 +12,13 @@ class Employee
 		private String dept_name;
 		private double salary;	
 		
-		public Employee()
+		public Employee() //Parameterless Constructor
 		{
 			
 		}
 
-		public Employee(int emp_id, String name, String age, String dept_name, double salary) {
+		public Employee(int emp_id, String name, String age, String dept_name, double salary) //Parameterized Constructor
+		{
 			this.emp_id = emp_id;
 			this.name = name;
 			this.age = age;
@@ -26,12 +27,13 @@ class Employee
 		}
 
 		@Override
-		public String toString() {
+		public String toString() //To String method
+		{
 			return "Employee [Emp_id=" + emp_id + ", Name=" + name + ", Age=" + age + ", Dept_Name=" + dept_name
 					+ ", Salary=" + salary + "]";
 		}
 		
-		void acceptdetails()
+		void acceptdetails() //Method To accept details from user
 		{
 			Scanner sc= new Scanner(System.in);
 			System.out.println("Enter Employee ID ");
@@ -74,7 +76,7 @@ class Stack
 			this.top=null;
 		}
 		
-		void isStackFull()
+		void isStackFull() // Method to Check Stack is full
 		{
 			if(size==5)
 			{
@@ -82,15 +84,15 @@ class Stack
 			} else System.out.println("Stack is not Full");
 		}
 		
-		void isStackEmpty()
-		{
+		void isStackEmpty()  // Method to Check Stack is Empty
+		{ 
 			if(size==0)
 			{
 				throw new RuntimeException("Stack UnderFlow");
 			} else System.out.println("Stack is not Empty");
 		}
 		
-		void push(Employee e)
+		void push(Employee e) //Method to push data into stack using DLLL  
 		{
 			//if stack is full
 			if(size ==5)
@@ -104,7 +106,8 @@ class Stack
 					if(size ==0)
 					{
 						top = newNode;
-					}else {
+					}else //new node is added at first position
+							{
 							newNode.next= top;
 							top.prev=newNode;
 							top = newNode;
@@ -113,7 +116,7 @@ class Stack
 					System.out.println("Size of Stack is "+size);
 				}
 		}
-		void pop(Employee e)
+		void pop(Employee e) //Method to delete the element at top
 		{
 			//stack is UndeFlow
 			if(size ==0)
@@ -135,7 +138,7 @@ class Stack
 			
 		}
 		
-		void top()
+		void top() //Method to peak element at top
 		{	
 			//is stack is UnderFlow
 			if(size ==0)
@@ -150,7 +153,7 @@ class Stack
 		
 	}
 
-//Ende of Class Stack
+//End of Class Stack
 //*********************************************************************************************
 
 
@@ -236,5 +239,4 @@ public class Employee_Test {
 		}while (choice!=0);
 
 	}
-
 }
