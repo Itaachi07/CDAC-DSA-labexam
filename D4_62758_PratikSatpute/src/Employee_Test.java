@@ -66,6 +66,32 @@ class Stack
 				this.prev= null;
 			}
 		}
+		private Node head;
+		private Node top;
+		
+		public Stack()
+		{
+			this.top=null;
+		}
+		
+		void isStackFull()
+		{
+			if(size==5)
+			{
+				throw new RuntimeException("Stack OverFlow");
+			} else System.out.println("Stack is not Full");
+		}
+		
+		void isStackEmpty()
+		{
+			if(size==0)
+			{
+				throw new RuntimeException("Stack UnderFlow");
+			} else System.out.println("Stack is not Empty");
+		}
+		
+		
+		
 	}
 
 
