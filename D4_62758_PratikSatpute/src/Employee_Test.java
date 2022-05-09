@@ -90,6 +90,29 @@ class Stack
 			} else System.out.println("Stack is not Empty");
 		}
 		
+		void push(Employee e)
+		{
+			//if stack is full
+			if(size ==5)
+			{
+				throw new RuntimeException("Stack OverFlow.... You can Enter only 5 Entries ");
+			} else
+				{
+					//create a New Node
+					Node newNode = new Node(e);
+					//is stack is UnderFlow
+					if(size ==0)
+					{
+						top = newNode;
+					}else {
+							newNode.next= top;
+							top.prev=newNode;
+							top = newNode;
+						}	
+					size++;
+					System.out.println("Size of Stack is "+size);
+				}
+		}
 		
 		
 	}
