@@ -47,6 +47,27 @@ class Employee
 		}
 		
 	}
+//END OF EMPLOYEE CLASS
+//******************************************************************************************************
+
+class Stack
+	{
+		int size =0;
+		static class Node
+		{
+			private Employee data;
+			private Node next;
+			private Node prev;
+			
+			public Node(Employee data)
+			{
+				this.data=data;
+				this.next=null;
+				this.prev= null;
+			}
+		}
+	}
+
 
 
 
