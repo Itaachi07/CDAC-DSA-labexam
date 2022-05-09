@@ -135,6 +135,18 @@ class Stack
 			
 		}
 		
+		void top()
+		{	
+			//is stack is UnderFlow
+			if(size ==0)
+			{
+				throw new RuntimeException("Stack UnderFlow.");
+			} else
+			{
+				//if Stack is Not Empty
+				System.out.println("The Top element is : "+top.data);
+			}
+		}
 		
 	}
 
