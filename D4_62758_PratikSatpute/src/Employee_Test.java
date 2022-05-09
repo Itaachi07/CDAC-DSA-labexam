@@ -168,10 +168,71 @@ public class Employee_Test {
 			System.out.println("1. Push");
 			System.out.println("2. Pop");
 			System.out.println("3. Top");
-			System.out.println("4. is Stack UnderFlow");
-			System.out.println("5. is Stack OverFlow");
+			System.out.println("4. is Stack Empty");
+			System.out.println("5. is Stack Full");
 			System.out.println("0. Exit");
+			System.out.println("********************************************************************");
+			System.out.println("Enter Choice ");
+			choice = sc.nextInt();
 			
+			switch(choice)
+			{
+			case 1:
+					try {
+						e= new Employee();
+						System.out.println("Enter Employee details");
+						e.acceptdetails();
+						s.push(e);
+						System.out.println(e+ " Pushed into Stack");
+					}
+					catch(RuntimeException r)
+					{
+						System.out.println(r.getMessage());
+					}
+				break;
+				
+			case 2:
+				try {
+					s.pop(e);
+					System.out.println( "Employee Popped Successfully");
+				}
+				catch(RuntimeException r)
+				{
+					System.out.println(r.getMessage());
+				}
+			break;
+			
+			case 3:
+				try {
+					s.top();
+				}
+				catch(RuntimeException r)
+				{
+					System.out.println(r.getMessage());
+				}
+			break;
+			
+			case 4:
+				try {
+					s.isStackEmpty();
+				}
+				catch(RuntimeException r)
+				{
+					System.out.println(r.getMessage());
+				}
+			break;
+			
+			case 5:
+				try {
+					s.isStackFull();
+				}
+				catch(RuntimeException r)
+				{
+					System.out.println(r.getMessage());
+				}
+			break;
+			}
+						
 		}while (choice!=0);
 
 	}
