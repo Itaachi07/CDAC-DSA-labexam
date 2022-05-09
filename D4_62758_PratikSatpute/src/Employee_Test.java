@@ -150,13 +150,29 @@ class Stack
 		
 	}
 
-
+//Ende of Class Stack
+//*********************************************************************************************
 
 
 public class Employee_Test {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Scanner sc =new Scanner(System.in);
+		Stack s= new Stack();
+		Employee e =null;
+		int choice;
+		
+		do {
+			System.out.println("********************************************************************");
+			System.out.println("Menu");
+			System.out.println("1. Push");
+			System.out.println("2. Pop");
+			System.out.println("3. Top");
+			System.out.println("4. is Stack UnderFlow");
+			System.out.println("5. is Stack OverFlow");
+			System.out.println("0. Exit");
+			
+		}while (choice!=0);
 
 	}
 
