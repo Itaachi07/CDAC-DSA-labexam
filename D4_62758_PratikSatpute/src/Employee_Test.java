@@ -31,7 +31,20 @@ class Employee
 					+ ", Salary=" + salary + "]";
 		}
 		
-		
+		void acceptdetails()
+		{
+			Scanner sc= new Scanner(System.in);
+			System.out.println("Enter Employee ID ");
+			emp_id = sc.nextInt();
+			System.out.println("Enter Name ");
+			name = sc.next();
+			System.out.println("Enter age");
+			age= sc.next();
+			System.out.println("Enter Department name");
+			dept_name=sc.next();
+			System.out.println("Enter Salary");
+			salary= sc.nextDouble();
+		}
 		
 	}
 
